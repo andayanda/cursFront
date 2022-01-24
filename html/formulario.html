@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Ejjerciocio de formulario</h1>
+        <p>Replicar el ejemplo de la imagen</p>
+        <img src="img/formu.JPG" alt="delfin" width="500" height="600">
+
+    </div>
+    <div>
+        <h2>Dades bàsiques</h2>
+        <form action="">
+            <label for="fname">Nom</label><br>
+            <input type="text" id="fname" name="fname" value="Nom"><br>
+            <label for="lname">Primer cognom</label><br>
+            <input type="text" id="lname" name="lname" value="Primer cognom"><br><br>
+            <label for="lname">Segon cognom</label><br>
+            <input type="text" id="lname" name="lname" value="Segon cognom"><br><br>
+            <label for="doc">Tipus de document:</label>
+            <select id="doc" name="docu">
+                <option value="DNI">DNI</option>
+                <option value="PASAPORTE">PASAPORT</option>
+                <option value="NIE">NIE</option>
+            </select>
+            <label for="doc">Document</label>
+            <input type="text" id="doc" name="doc"><br>
+            <h2>Dades de contacte</h2>
+            <label for="email">Adreça de correu</label><br>
+            <input type="email" id="email" name="email" value="mail@exemple.com"><br>
+            <label for="phone">Telèfon</label><br>
+            <input type="tel" id="phone" name="phone" value="123 12 12 12"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"><br>
+            <p>Vius a Barcelona?</p>
+
+              <input type="radio" id="si" name="resid" value="si">
+              <label for="si">SI</label><br>
+              <input type="radio" id="neg" name="resid" value="neg">
+              <label for="neg">NO</label><br>
+
+
+
+            <input list="carrers" name="carrer" value="Tria el tipus de via">
+            <datalist id="carrers">
+                <option value="Carrer">
+                <option value="Avinguda">
+                <option value="Plaça">
+                <option value="Passatge">
+                <option value="Carretera">
+
+            </datalist>
+            <label for="adres">Adreça</label>
+            <input type="text" id="adres" name="adres" value="Augusta">
+            <label for="num">Número</label>
+            <input type="number" id="num" name="num"><br>
+            <label for="piso">Pis</label>
+            <input type="number" id="piso" name="piso">
+            <label for="port">Porta</label>
+            <input type="number" id="port" name="port">
+            <label for="escala">Escala</label>
+            <input type="text" id="escala" name="escala"><br>
+            <label for="codi">Codi postal</label>
+            <input type="number" min="5" max="5" id="codi" name="codi" disabled value="08001">
+            <label for="vila">Població</label>
+            <input type="text" id="vila" name="vila" disabled value="BARCELONA"><br>
+            <H2>Tecnologies que t’agradaria saber</H2>
+
+            <input type="checkbox" id="tecno1" name="tecno1" value="HTML">
+            <label for="tecno1"> HTML</label><br>
+            <input type="checkbox" id="tecno2" name="tecno2" value="CSS">
+            <label for="tecno2"> CSS</label><br>
+            <input type="checkbox" id="tecno3" name="tecno3" value="JS">
+            <label for="tecno3"> JS</label><br>
+            <h2>El que més t’interessa aprendre és...</h2>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+              <label for="html">HTML</label><br>
+              <input type="radio" id="css" name="fav_language" value="CSS">
+              <label for="css">CSS</label><br>
+              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+              <label for="javascript">JavaScript</label><br><br>
+            <label for="coment">Comentaris</label><br><br>
+            <textarea id="coment" name="coment" rows="4" cols="70">
+  Afeigeix els teus comentaris...
+  </textarea>
+            <br><br>
+            <h2>Data de naixement</h2>
+            <label for="birthday">Cumpleany:</label>
+            <input type="date" id="birthday" name="birthday">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,7 +1,27 @@
-body{background-color:rgb(207, 207, 230) ;}
-/*p{}
-ul{}*/
+body{background-color:rgb(207, 207, 230) ;
+ }
+ section {
+
+  border: 1px #6026be solid;
+ }
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
 ul li {
     background: #cce5ff;
     margin: 5px;
   }
+  footer {
+
+    border: 1px #26be4c solid;
+   } 

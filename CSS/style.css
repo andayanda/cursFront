@@ -1,0 +1,19 @@
+* {font: 1em/1.3 Arial, Helvetica}
+
+#ej2 {
+    width: 500px;
+    border: 15px solid rgb(231, 10, 10);
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+  }
+  #ej3a {
+    width: 100px;
+    border: 1px solid rgb(172, 171, 171);
+    padding: 30px;
+    margin-left: 60px;
+    text-align: center;
+    border-radius: 8px;
+
+  }
+

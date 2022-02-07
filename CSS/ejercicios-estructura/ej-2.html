@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*encabezado*/
+    main{
+        background-color: greenyellow;
+    }
+    h1{
+        font: bold 40px;
+        text-align: center;
+    }
+/*cuerpo*/
+#columnas{
+    text-align: left ;
+    width: 100%;  
+    
+
+}
+     #izquierda{
+         background-color: blue;
+        width:20% ;
+        float: left;
+        
+     }
+     #centro{
+         background-color: rgb(188, 196, 162);
+        width:60% ;
+        float: left;
+        
+        
+     }
+     #derecha{
+         background-color: rgb(230, 68, 103);
+        width:20% ;
+        float: left;
+        
+     }
+        /*footer*/
+        #pie{
+            text-align: center;
+            background-color: coral;
+
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  #izquierda {
+    width: 100%;
+  }
+
+  #centro {
+    width: 100%;
+  }
+
+  #derecha {
+    width: 100%;
+  }
+
+  #pie {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  #izquierda {
+    width: 100%;
+  }
+
+  #centro {
+    width: 100%;
+  }
+
+  #derecha {
+    width: 100%;
+  }
+
+  #pie {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+    <main>
+        <h1>ENCABEZADO</h1>
+    </main>
+    <section id="columas">
+        <div id="izquierda">Columna lateral izquierda</div>
+        <div id="centro">Columna central</div>
+        <div id="derecha">Columna lateral derecha</div>
+    </section>
+    <footer id="pie">Pie de página</footer>
+    
+</body>
+</html>

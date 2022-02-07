@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-size: 30px;
+    }
+    /* content dos-columnes: mateix ample amb inline-block*/
+    #content {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.columna {
+  display: inline-block;
+  margin: 0%;
+  border: solid;
+  padding: 0%;
+  width: 40%;
+}
+     /* content2 dos-columnes: distinto ancho inline-block*/
+     #content2 {
+  margin: 0;
+  border: solid;
+  padding: 0;
+  width: 100%;
+}
+
+#columna1 {
+  display: inline-block;
+  border: solid;
+  width: 75%;
+
+}
+#columna2 {
+  display: inline-block;
+  border: solid;
+  width: 20%;
+}
+     /* content3 dos-columnes diferent ample: amb float */
+
+#contentfloat{
+    text-align: left ;
+    width: 100%;  
+
+}
+#principal{
+    border: solid;
+    width:70% ;
+    margin-right: 10px;
+    float: left;
+}
+#lado{
+    border: solid;
+    width: 20%;
+    float: right;
+    background-color: gray;
+}
+
+</style>
+<body>
+    <section id="content">
+        <div class="columna">Contenido de la columna 1</div>
+        <div class="columna">Contenido de la columna 2</div>
+    </section>
+
+    <section id="content2">
+        <div id="columna1">Contenido de la columna 1</div>
+        <div id="columna2">Contenido de la columna 2</div>
+    </section>
+    <section id="contentfloat">
+        <div id="principal">Contenido de la columna Principal</div>
+        <div id="lado">Contenido de la columna lateral</div>
+    </section>
+
+</body>
+</html>

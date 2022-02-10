@@ -11,51 +11,78 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-light ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo-bookmark.svg" alt="Logo" class="rounded-pill">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse row-cols-md-6 offset-md-6" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">FEATURES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">PRICING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">CONTACT</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-danger" type="button">LOGIN</button>
-                </form>
-            </div>
+
+    <nav class="navbar navbar-expand-sm p-5 bg-light ">
+
+        <a class="navbar-brand p-5" href="#">
+            <img src="img/logo-bookmark.svg" alt="Logo" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row-cols-md-6 offset-md-6 p-5" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="features.html">FEATURES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">PRICING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">CONTACT</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-danger" type="button">LOGIN</button>
+            </form>
         </div>
+
     </nav>
 
 
-    <div class="row">
+    <div class="row p-5">
         <div class="col-sm-12 col-md-6 py-5">
             <h1>A Simple Bookmar Manager</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda praesentium quae sequi, ex
                 tempore nihil autem voluptatibus aliquid dicta!</p>
             <button class="btn btn-primary">Get it on Chrome</button>
-            <button class="btn btn-primary"disabled>Get it on Firefox</button>
+            <button class="btn btn-primary" disabled>Get it on Firefox</button>
 
         </div>
         <div class="col-sm-12 col-md-6 py-5">
-            <img src="img/illustration-hero.svg" alt="">
-           
+            <img src="img/illustration-hero.svg" class="img-fluid" alt="">
+
         </div>
     </div>
     </div>
+    </div>
+
+    <footer class="container mt-3 justify-content-center py-4 bg-info">
+        <div class="r">
+            <p>Try to submit the form.</p>
+            <h3>Stay Up-to-date with what we're doing</h3>
 
 
+            <form class="was-validated">
+                <div class="row">
+                <div class="col-6">
+
+                    <input type="text" class="form-control" id="uname" placeholder="Enter your e-mail" name="uname"
+                        required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+               
+                <div class="col-6">
+                <button type="submit" class="btn btn-danger">Contact US</button>
+                </div>
+            </div>
+            </form>
+        </div>
+
+        
+
+    </footer>
 
 </body>
 

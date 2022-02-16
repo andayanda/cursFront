@@ -1,0 +1,108 @@
+* {
+   margin: 10px;
+   padding: 10px;
+
+}
+
+body{
+
+   background: white;
+   color: #000;
+   font-size: 24px;
+   line-height: 1.2em;
+   font-weight: 500;
+  font-family: 'Slabo 27px',Georgia,"Times New Roman",serif;
+}
+h1 h2 h3{
+    color: #333;
+    line-height: 1em;
+}
+.container{
+        width: 85% ;
+    box-shadow: 4px 3px 3px 3px #93e4cb;
+    
+
+}
+img{
+    max-width: 100%;
+}
+
+
+/* cabecera */
+.menu{
+   display: flex;
+   flex-flow: row nowrap;
+   font-size: 17px;      
+   align-items: center;   
+  
+   margin: auto;
+   padding: 0;
+   justify-content: center;   
+   background-color: #86bcc1;
+}
+
+/*  MENU */
+.nav-menu{
+   display: flex;  
+   flex:5;  
+   align-items: right;
+   justify-content: flex-end;   
+}
+
+ul li{
+    list-style: none; 
+  }
+  
+  a{
+  color: black;
+  text-decoration: none;
+  }
+  .productos {
+    display: flex;
+    flex: 2;
+    flex-wrap: nowrap;  
+    
+}
+.catalogo {
+    align-items: center;
+    display: flex;
+       
+    flex-basis: 33%; 
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    max-width: 30%;
+    background: #fff;
+    padding: 1em;
+    margin: 0.1em;
+    
+}
+.catalogo>p {
+    flex-grow: 2;
+}
+.lateral {    
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: justify;
+   
+    background: blue;
+    padding: 1em;
+    margin: 0.1em;
+    
+}
+.simone{
+    max-width: 420px;
+    flex: 1;    
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.pie{
+    display: flex;   
+   
+}

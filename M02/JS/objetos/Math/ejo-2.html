@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h2>1. Donat un número:  arrodoneix, arrodoneix cap abaix i cap adalt, arrel cuadrada, absolut, potencia, minim, maxim, aleatori, aleatori dins d’un rang. 
+        </h2>
+        
+    <article>Aleatori dins d'el rang de dos numeros pedidos</article>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        let primer = parseInt(prompt("dime un numero"));
+        let segundo = parseInt(prompt("dime un numero"));
+        
+        // Math.floor(Math.random()*(max -min))+min;
+        let min =Math.min(primer,segundo);
+        let max = Math.max(primer,segundo);
+        random = Math.floor(Math.random()*(max-min))+min;
+        document.getElementById("demo").innerHTML = random;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h2>metodos y propiedades de String 
+        </h2>
+        <p>Practicarem amb els mètodes: .replace , .slice, i typeof  </p>
+        
+   
+    
+
+    <script type="text/javascript">
+        let producto =  '        Monitor 20 Pulgadas      '; 
+        //Reemplaça Pulgadas per ‘. Reemplaça 20 per 40.
+        let newproducto=(producto.replace('20', '40'));
+        console.log(newproducto);
+        let new2producto=(producto.split(" "));
+        let posicion = new2producto.slice(8,11,12,13,14,15,16,17);
+
+
+        // //Extreu en una nova variable la següent part de la frase: 40 Pulgadas. 
+     
+
+        console.log(newproducto.indexOf("40 Pulgadas"));
+
+        console.log("num  " + producto.trim().length);
+
+        
+        //Extreu en una nova variable la següent part de la farase:  nitor 20. 
+        
+      console.log(new2producto);
+      console.log(posicion);
+        // //Declara una variable i assignali el teu Nom. Mostra la primer lletra d’aquesta variable. 
+
+       
+       
+
+    </script>
+</body>
+</html>

@@ -18,24 +18,40 @@
     <script type="text/javascript">
         let producto =  '        Monitor 20 Pulgadas      '; 
         //Reemplaça Pulgadas per ‘. Reemplaça 20 per 40.
-        let newproducto=(producto.replace('20', '40'));
-        console.log(newproducto);
-        let new2producto=(producto.split(" "));
-        let posicion = new2producto.slice(8,11,12,13,14,15,16,17);
+        console.log("****Replace 20 por 40***");
+       producto=(producto.replace('20', '40'));
+       console.log("**** Repalce Pulgadas por '   ***");
+        console.log(producto);
+      producto=(producto.replace('Pulgadas',"'"));
+         // //Extreu en una nova variable la següent part de la frase: 40. 
+        console.log(producto);
+        console.log("*** Slice y indexOf de 40 ****");
+        producto =  '        Monitor 40 Pulgadas      '; 
+        var posicion=(producto.indexOf("40 "));
+        let pulgadas=producto.slice(posicion);
+        console.log("Pulgadas: "+ pulgadas);   
+//Extreu en una nova variable la següent part de la farase:  nitor 20.
+console.log("*** Slice y indexOf de nitor 20 ****");
+producto="Monitor 20";
+console.log(producto);
+var posicioninicio=producto.indexOf("n");
+console.log("Posicion inicial:"+posicioninicio);
+var posicionfinal=producto.indexOf("20");
+console.log("Posicion final:"+posicionfinal);
+let nitor=producto.slice(2,8);
+console.log(nitor);
+        
 
-
-        // //Extreu en una nova variable la següent part de la frase: 40 Pulgadas. 
+       
      
 
-        console.log(newproducto.indexOf("40 Pulgadas"));
+        // console.log(newproducto.indexOf("40 Pulgadas"));
 
-        console.log("num  " + producto.trim().length);
+        console.log("num de elementos  " + producto.trim().length);
 
         
-        //Extreu en una nova variable la següent part de la farase:  nitor 20. 
         
-      console.log(new2producto);
-      console.log(posicion);
+      
         // //Declara una variable i assignali el teu Nom. Mostra la primer lletra d’aquesta variable. 
 
        

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    
+        <p>1. Declara una variables anomenada esCorrecte, assigna-li true o false. Utilitza un condicional per veure el seu valor.  </p>
+
+       <p>2. Declara i assigna dos valors booleans. 
+           Programa els següent escenaris: 
+           a. Escenari 1: Si tots dos valors són certs, el resultat hauria de ser cert. En la resta de casos ha de ser Fals. 
+           b. Escenari 2: Si un dels dos valors és certs, el resultat hauria de ser cert. En la resta de casos ha de ser Fals. </p>
+           <p>3. Analitza les següents expressions lògiques. Mostra per pantalla el seu valor i raona el seu resultat. a) 2 < 12              b) 2 < "12"  c) "2" < "12"  d) !("2" < "12") e) ((2 < "12") && (2 == "2")) f) (("2" < "12") || (2 < 12)) g) (("2" < "12") && (2 < 12)</p>
+        
+   
+    
+    <script type="text/javascript">
+       let esCorrecte=true;
+       if(esCorrecte){
+           console.log(" el valor de la variable es True")
+       }
+       else{
+        console.log(" el valor de la variable es Falso")
+
+       }
+       console.log("Escenari 1: ")
+       let a=true;
+       let b=false;
+       if(a && b){
+        console.log(" el valor de las dos variables es True")
+       }
+       else{
+        console.log(" el valor de las dos variables NO es True")
+       }
+       
+       if(a || b){
+        console.log(" el valor Alguna de las dos variables es True")
+       }
+       else{
+        console.log(" el valor Ninguna de las dos variables es True")
+       }
+let menor= 2<12  
+console.log("2 es menor que 10 es: "+ menor);   
+let d=2 < "12";   
+console.log("la comparacion de un numero y un string: "+ d);  
+  let e= "2" < "12";
+  console.log("la comparacion de dos string es: "+ e);
+  let f= !("2" < "12");
+  console.log("la negacion de la comparacion de dos string es: "+ f);
+  let g= ((2 < "12") && (2 == "2"));
+  console.log("se cumplen las dos condiciones es: "+ g);
+  let h=(("2" < "12") || (2 > 12));
+  console.log("se cumple una de las dos condiciones es: "+ h);
+    </script>
+</body>
+</html>

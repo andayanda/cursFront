@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  
+
 </head>
+
 <body>
-    
-        <p>1. Imagina’t que vols fer el pagament del carrito de la compra.  Donades 2 variables totalCarrito, cashDisponible, comprova si tens prou cash per pagar el total del carret.  </p>
-        <p>2. Imagina’t que en la teva botiga els usuaris poden tenir 3 roles: </p><br>
-            • ADMIN: El Usuario puede editar, eliminar y ver toda la información <br>
-            • EDITOR: El usuario solo puede editar sus registros <br>
-            • AUTOR: El usuario solo puede registrar usuarios <br>
-            • ANOMYMOUS: El Usuario es visitante, solo puede ver la información <br>
-            Controla les accions que poden fer cadascún d’ells amb un if </p>
-            <p>3. Quina és la millor estructura de control per diferenciar les funcionalitats de les formes de pagament d’una compra, tenint les següents opcions: efectiu, codi promocional, tarjeta. Escriu la estructura de control més adecuada. 
 
-            </p>
+    <p>1. Imagina’t que vols fer el pagament del carrito de la compra. Donades 2 variables totalCarrito, cashDisponible,
+        comprova si tens prou cash per pagar el total del carret. </p>
+    <p>2. Imagina’t que en la teva botiga els usuaris poden tenir 3 roles: </p><br>
+    • ADMIN: El Usuario puede editar, eliminar y ver toda la información <br>
+    • EDITOR: El usuario solo puede editar sus registros <br>
+    • AUTOR: El usuario solo puede registrar usuarios <br>
+    • ANOMYMOUS: El Usuario es visitante, solo puede ver la información <br>
+    Controla les accions que poden fer cadascún d’ells amb un if </p>
+    <p>3. Quina és la millor estructura de control per diferenciar les funcionalitats de les formes de pagament d’una
+        compra, tenint les següents opcions: efectiu, codi promocional, tarjeta. Escriu la estructura de control més
+        adecuada.
 
-       
-    
+    </p>
     <script type="text/javascript">
-         console.log(" carrito")
-     let  totalCarrito= 56;
-     let  cashDisponible= 110;
-       if(totalCarrito<cashDisponible){
-           console.log(" Tienes suficiente cash para pagar")
-       }
-       else{
-        console.log(" No tienes suficiente cash para pagar")
+        console.log(" carrito 56€ cash 110")
+        let totalCarrito = 56;
+        let cashDisponible = 110;
+        if (totalCarrito < cashDisponible) {
+            console.log(" Tienes suficiente cash para pagar")
+        } else {
+            console.log(" No tienes suficiente cash para pagar")
 
-       }
-       console.log(" forma de pago");
+        }
+        // ,EDITOR,AUTOR,ANONYMOUS
+        let rol='ANONYMOUS';
+        
+        
+        if (rol=='ADMIN') {alert("Puedes hacer y deshacer lo que quieras")}
+            else if(rol=='EDITOR'){
+                alert("Puedes escribir lo que quieras")
 
-       let formaP=prompt("Pagaras en efectivo: si o no?")
-       if(formaP ==si||Si||SI){
-           promo=prompt("Tienes un codigo promocional?")
-               console.log("vamos a restart tu cupon");
-           }
-    
+            }
+            else if(rol=='AUTOR'){
+                alert("Solo puedes escribir en tu texto")
 
+            }
+            
+        else { alert("Solo puedes leer")
+            
+        }
+
+        // console.log(" forma de pago");
+
+        // let formaP = prompt("Pagaras en efectivo: si o no?")
+        // if (formaP == si || Si || SI) {
+        //     promo = prompt("Tienes un codigo promocional?")
+        //     console.log("vamos a restart tu cupon");
+        // }
     </script>
 </body>
+
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    
+        <p>Imagina’t que en la teva botiga tens les següents variables:
+            let efectivo;<br>
+            let credito;<br>
+            let disponible = efectivo + credito;<br>
+            let totalCarrito; </p>
+        <p>Programa un codi, que mostri als clients un missatge amb les formes de 
+            pagament que té disponibles en funció dels següents escenaris: </p><br>
+           <p>escenari 1: “Pots comprar en efectiu o amb crèdit”
+            let efectivo = 1000;
+            let credito = 1000;
+            let disponible = efectivo + credito;
+            let totalCarrito = 700;<br>
+
+            escenari 2: “Pots comprar fent us d’efectiu i crèdit”
+            let efectivo = 300;
+            let credito = 400;
+            let disponible = efectivo + credito;
+            let totalCarrito = 700;<br>
+
+            escenari 3: “No disposes de saldo disponible per fer la compra”
+            let efectivo = 300;
+            let credito = 400;
+            let disponible = efectivo + credito;
+            let totalCarrito = 900;</p>
+
+            </p>
+
+       
+    
+    <script type="text/javascript">
+        //escenari 1
+         
+         let efectivo = 100;
+         let credito = 100;   
+         let disponible = efectivo + credito;
+         let totalCarrito = 700;
+     
+       if(totalCarrito<=disponible){
+           console.log(" Escenari 1:Pots comprar en efectiu o amb credit")
+       }
+       else  if(totalCarrito<=disponible){
+           console.log(" Escenari 2: Pots comprar en efectiu o amb credit")
+       }
+    else if(totalCarrito<=disponible){
+        console.log(" Escenari 3: Pots comprar en efectiu o amb credit")
+    }
+       else{
+        console.log(" No tienes suficiente cash para pagar")
+
+       }
+       // escenari 2
+    //    let efectivo = 300;
+    //         let credito = 400;
+    //         let disponible = efectivo + credito;
+    //         let totalCarrito = 700;
+    //         if(totalCarrito<=disponible){
+    //        console.log(" Escenari 2: Pots comprar en efectiu o amb credit")
+    //    }
+    //    else{
+    //     console.log(" No tienes suficiente cash para pagar")
+
+    //    }
+    //escenari 3: “No disposes de saldo disponible per fer la compra”
+    //         let efectivo = 300;
+    //         let credito = 400;
+    //         let disponible = efectivo + credito;
+    //         let totalCarrito = 900;
+    //         if(totalCarrito<=disponible){
+    //        console.log(" Escenari 3: Pots comprar en efectiu o amb credit")
+    //    }
+    //    else{
+    //     console.log(" Escenari 3: No disposes de saldo disponible per fer la compra")
+
+    //    }
+
+
+
+    
+
+    </script>
+</body>
+</html>

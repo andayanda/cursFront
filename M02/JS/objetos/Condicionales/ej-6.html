@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    
+        <p>6. Demana una nota (número). Mostra qualificació segons nota:
+            0-3: Mol deficient<br>
+            3-5: Insufficient<br>
+            5-6: Sufficient<br>
+            6-7: Bé<br>
+            7-9: Notable<br>
+            9-10: Excel·lent<br>
+
+            <br>
+            <p>Si le pongo el decimal con coma en lugar de punto se queda con el entero</p>
+            </p>
+            
+
+       
+
+       
+    
+    <script type="text/javascript">
+     const nota= parseFloat(prompt("Entre su nota"));
+     if (nota<=3) {console.log('Segons la nota donada, la vostra calificacio es: Molt deficient');
+         
+     } else if(nota>3 && nota<5 ) {console.log('Segons la nota donada, la vostra calificacio es Insufficient');
+         
+     }
+     else if(nota>=5 && nota<=6 ) {console.log('Segons la nota donada, la vostra calificacio es Sufficient');}
+     else if(nota>6 && nota<=7) {console.log('Segons la nota donada, la vostra calificacio es Be');}
+     else if(nota>7 && nota<=9) {console.log('Segons la nota donada, la vostra calificacio es Notable');}
+     else{console.log('Segons la nota donada, la vostra calificacio es Excel·lent');
+
+     }
+
+
+     
+    
+
+    </script>
+</body>
+</html>

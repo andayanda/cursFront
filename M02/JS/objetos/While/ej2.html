@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p>2. A) Utilitza la declaració do while de JavaScript per programar un simple joc d'endevinar un número del 1 al 10. Segueix el següent passos:<br>a. El teu programa calcularà un número secret ( pots fer servir l’objecte Math ) i no l’ha de mostrar per pantalla, ja que l’hauràs d’endevinar. <br>b. Demana el número que has d’endevinar per pantalla entre 1 i 10 ( fent servir el prompt) .<br> c. Repeteix el punt anterior, fins que no donis amb el número secret <br> d. Quan el trobis mostra un missatge per pantalla amb el número d’intents que has fet. </p>
+    <script>
+       let tunum = 0;
+        let random = Math.floor(Math.random() * 10);
+    
+        do {  tunum = parseInt(prompt("dime un numero"));
+           
+        }
+        while (tunum = random);
+       document.getElementById("demo").innerHTML = "Has acertado. el numero aleatorio era: "+random+"has hecho "+"intentos";
+    </script>
+</body>
+
+</html>

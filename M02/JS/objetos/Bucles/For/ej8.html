@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>8. Fes un programa que mostri el següent per pantalla:                                          </p>
+    <p id="resultat"></p>
+       
+    <script> /* Fes un programa que mostri el següent per pantalla:                            
+
+        *
+                    
+        * *
+
+        * * *
+
+        * * * *
+
+        * * * * *
+
+        * * * * * *
+        El nombre de línies formades per “*” vindrà donat per una variable.            
+        Condició: En tot el codi del programa només hi pot haver un * */
+     
+
+var est="";
+
+    for(let i=1; i<=6; i++){  //linies
+        for (let j=0; j<i;j++){//estrelles
+        est += " * ";            
+        }  
+        est = est +"<br>"+"<br>";
+    }
+
+       
+document.getElementById("resultat").innerHTML=est;          
+
+            
+        </script>
+</body>
+</html>

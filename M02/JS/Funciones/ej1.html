@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h2>Pruebas con funciones</h2>
+    <p id="demo">1. Crea una funció que es digui Saludar, que tingui tres argument: nom, cognom, sexe. Crida a aquesta funció amb diferents escenaris, per tal d’escriure per pantalla:
+        Benvinguda [nom] [Cognoms] si és dona.
+        Benvingut [nom] [Cognoms] si és home.
+        També, tingues en compte un escenari, per quan no passis a la funció el paràmetre sexe.</p>
+    <script>
+        let nom="";
+        let cognom="";
+        let sexe="";
+        //escenario 1
+        nom="Eva";
+        cognom="Espinola";
+        sexe="D";
+        saludar(nom,cognom,sexe);
+        //escenario 2
+        nom="Juan";
+        cognom="Perez";
+        sexe="H";
+        saludar(nom,cognom,sexe);
+//escenario 3
+saludar('Ana','Martinez','X')
+        function saludar(nom,cognom,sexe) {
+//[instruccions]
+    switch (sexe){
+    case "D":
+    console.log("Bienvenida"+nom+cognom);
+    break;
+    case "H":
+    console.log("Bienvenida"+nom+cognom);
+    break;
+    default:
+    console.log(`Hola ${nom} ${cognom}`);
+    break;
+} 
+ }
+
+
+    </script>
+</body>
+</html>

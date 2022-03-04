@@ -1,0 +1,76 @@
+.contenedor-columnas {
+    /*Modifica aquí el tamaño de las columnas y veras que no se deforma la imagen ni se recorta*/
+    --col-height: 120px;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 50px;
+  }
+  
+  .columx2 {
+      width: 50%;
+      float: left;
+      padding: 20px 20px;
+      box-sizing: border-box;
+  }
+  
+  .columna {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: stretch;
+    justify-content: center;
+    height: var(--col-height);
+    background-color: red;
+    background-image: url('http://picsum.photos/800/600?image=307');
+    background-color: #ece0d5;
+    background-blend-mode: color-burn;/*Esta propiedad es innecesaria, ignorala. La uso simplemente para darle un tono distinto y más claro al fondo*/
+      background-position: center;
+      background-size: cover;	
+  }
+  
+  .title {
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4e3224;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.5em;
+    position: relative;
+  }
+  
+  .pleca{
+    background-image: url('https://dgm.azureedge.net/products/lg/fiora-shelf-bronze.png');
+    background-position: center calc(100% + 15px);
+    background-size: 100% 60px;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;/*El espacio que ocuparía la pleca*/
+  }
+  
+  .columx2 img {
+    width: 100%;      
+    height: calc(100% - 50px); 
+    object-fit: contain;  
+  }
+  
+  /*Este estilo de abajo ignoralo, es solo para que puedas jugar con los tamaños de las columnas*/
+  
+  style{
+    background: #444;
+    color: lime;
+    font-family: monospace;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
+        meses.push('Julio');//añade uno a la cola
+        meses.unshift('diciembre')//añade uno al principio
+        meses.shift(); //borra el primero
+        const mesesDos = meses.splice(1, 2); //saca elementos y los devuelve en array
+
+        const eliminado = meses.pop()//elimina el ultimo y lo devuelve
+        // Per saber nº elementos que hi ha al array 
+        console.log(meses.length);
+        for (let i = 0; i < meses.length; i++) {
+            console.log(meses[i]);
+        }
+        console.log(meses.length);
+        console.log(eliminado);
+        console.log(mesesDos);
+        const carrito = [{ nombre: 'Monitor 20 Pulgadas', precio: 500 }, { nombre: 'Televisión 50 Pulgadas', precio: 700 }, { nombre: 'Tablet ', precio: 300 }, { nombre: 'Audifonos', precio: 200 }, { nombre: 'Teclado', precio: 50 }, { nombre: 'Celular', precio: 500 },]
+        // Recorrer un array de la forma tradicional y mostrar su contenido... 
+        // for (let i = 0; i < carrito.length; i++) { console.log("articulo:" + carrito[i].nombre + "Precio: $ " + carrito[i].precio); }
+        // ForEach 
+        // carrito.forEach( function(producto) {     console.log("articulo:" + producto.nombre + "Precio: $ "  + producto.precio);    }) 
+        //La manera més detalla
+        function myfunction(producto) {
+            console.log("articulo:" + producto.nombre + "Precio: $ " + producto.precio);
+        }
+        carrito.forEach(myfunction)
+        //sum = 0 + 1 + 2 + 3 + 4 + 5 = 15 
+        var array = [1, 2, 3, 4, 5];
+        var sum = array.reduce(function (total, element, index, array) {
+            return total += element;
+        }, 0);
+        console.log(sum);   
+    </script>
+</body>
+
+</html>

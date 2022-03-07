@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>9. Fes un programa amb les seves funcions que determini si un password és segur. Per exemple, un password segur ha de complir les següents condicions:</p>
+    <ol>
+        <li>Ha de contenir almenys 8 numeros</li>
+        <li>Ha de contenir almenys una majuscula</li>
+        <li>Ha de contenir almenys una minuscula</li>
+        <li>Ha de contenir almenys un numero</li>
+        <li>Ha de contenir almenys un caracter especial </li>
+    </ol>
+    <p>Pots fer servir una funció per cada comprovació.</p>
+    
+</body>
+<script>
+    const pass="miManson10!";
+    console.log("longitud: "+pass.length);
+   
+    console.log(pass.match(/\d/g));//2 digitos
+    console.log(pass.match(/[A-ZÁÉÍÓÚÜÑ]/g));//10 caracteres
+    console.log(pass.match(/[a-záéíóúüñ]/g));
+    // const patNum= /\d/g;
+   
+    
+    const patNum=/\d/g;
+    const patMay= /[A-ZÁÉÍÓÚÜÑ]/g;
+    const patMin= /[a-záéíóúüñ]/g;
+    const patEsp= /[;:\.,!¡\?¿@#\$%\^&\-_+=\(\)\[\]\{\}]/g;
+
+    
+    console.log(patNum.test(pass));
+    console.log(patMay.test(pass));
+    console.log(patMin.test(pass));
+    console.log(patEsp.test(pass));
+    //
+   
+
+</script>
+</html>

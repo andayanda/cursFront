@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <p>2. Crea una funció que rebi un array de 5 noms com a paràmetre i retorni un nou array amb el número de caràcters
+        de cada nom.</p>
+    <script>
+        function letrasNom(cadenaCar) {
+            var newArray = [];
+            for (let i = 0; i <cadenaCar.length; i++) {
+
+                newArray.push(cadenaCar[i].length);
+                console.log(cadenaCar[i]);
+            }
+            return newArray;
+        }
+        let noms = ["juan", "carmen", "loli", "pepi", "toni"];
+        console.table(noms);
+
+        // console.table("los caracteres: "+noms);//ok
+        console.log("resultado" + letrasNom(noms));
+    </script>
+
+</body>
+
+
+</html>

@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    
-</body>
-<script>
-    function numeros(a,b){
-        var newArray=[];
-        var inicio=a;
-        var fin=b;
-        if(a>b){
-            inicio=b;
-            fin=a;
+    <p>1. Funció que rebi dos nombres i retorni un array amb tots els nombres compresos entre ells. El programa
+        principal ha de mostrar aquest array per consola.</p>
+        <script>
+    function numeros(a, b) {
+        var newArray = [];
+        var inicio = a;
+        var fin = b;
+        if (a>b) {
+            inicio = b;
+            fin = a;
         }
-        for(let i=inicio+1;i<fin;i++){
-          
+        for (let i = inicio + 1; i < fin; i++) {
+
             newArray.push(i);
         }
         return newArray;
     }
-    a=15;
-    b=8;
-    var retorn =numeros(a,b);
+    a = 15;
+    b = 8;
+    var retorn = numeros(a, b);
     console.log(retorn);
-    a=15;
-    b=28;
-    var retorn =numeros(a,b);
+    a = 15;
+    b = 28;
+    var retorn = numeros(a, b);
     console.log(retorn);
 </script>
+
+</body>
+
+
 </html>

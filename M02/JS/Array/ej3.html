@@ -4,57 +4,90 @@
 <body>
     <p>Donat el següent array d’objectes</p>
     <p>a) Mostrat tots els productes del carrito.
-     
-        <p>b) Mostrar els productes de més de 300€.
-           </p>
-           <p> c) Mostrar el total a pagar del carrito. (hem de sumar tots els preus.)
-           </p>
-           <p> d) Obtenir nous arrays, tenint en compte les següents condicions:
-            a. Nuevo Array con Productos con precio > 400
-            b. Nuevo Carrito con Productos con el nombre ‘Celular'
-            c. Nuevo Carrito con todos los excepto ‘Laptop
-           </p>
-           <p> e) Comprova que en el carrito no hi hagi algun preu = 0</p>
-    <script>
-        const carrito = [{
-                    nombre: 'Monitor 20 Pulgadas',
-                    precio: 500
-                }, {
-                    nombre: 'Televisión 50 Pulgadas',
-                    precio: 700
-                }, {
-                    nombre: 'Tablet',
-                    precio: 300
-                }, {
-                    nombre: 'Audifonos',
-                    precio: 200
-                }, {
-                    nombre: 'Teclado',
-                    precio: 50
-                }, {
-                    nombre: 'Celular',
-                    precio: 500
-                }, {
-                    nombre: 'Bocinas',
-                    precio: 300
-                }, {
-                    nombre: 'Laptop',
-                    precio: 800
-                },
-            ];
-            console.table(carrito);
-            console.log("metodo tradicional")            
-            
-                for (let i=0;i>carrito.lenght;i++){
-                    if (carrito[i].precio>300){
-                        console.log("contenido carrito de mas de 300€: "+ carrito[1].nombre+" -Precio "+carrito[1].precio)
-                                      
-                }
-            }
-                
 
-            
-            
+    <p>b) Mostrar els productes de més de 300€.
+    </p>
+    <p> c) Mostrar el total a pagar del carrito. (hem de sumar tots els preus.)
+    </p>
+    <p> d) Obtenir nous arrays, tenint en compte les següents condicions:
+        a. Nuevo Array con Productos con precio > 400
+        b. Nuevo Carrito con Productos con el nombre ‘Celular'
+        c. Nuevo Carrito con todos los excepto ‘Laptop
+    </p>
+    <p> e) Comprova que en el carrito no hi hagi algun preu = 0</p>
+    <script>
+        //mostrar prodductos de mas de 300€
+        console.log("mostrar productos de mas de 300€");
+
+        const carrito = [{
+            nombre: 'Monitor 20 Pulgadas',
+            precio: 500
+        }, {
+            nombre: 'Televisión 50 Pulgadas',
+            precio: 700
+        }, {
+            nombre: 'Tablet',
+            precio: 300
+        }, {
+            nombre: 'Audifonos',
+            precio: 200
+        }, {
+            nombre: 'Teclado',
+            precio: 50
+        }, {
+            nombre: 'Celular',
+            precio: 500
+        }, {
+            nombre: 'Bocinas',
+            precio: 300
+        }, {
+            nombre: 'Laptop',
+            precio: 800
+        },
+        ];
+        console.table(carrito);//ok
+        // console.log("metodo tradicional")            
+
+        //     for (let i=0;i<carrito.lenght;i++){
+        //         if (carrito[i].precio>300){
+        //             console.log("contenido carrito de mas de 300€- "+ carrito[1])
+
+        //     }
+        // }
+        carrito.forEach(function (producto) {
+            console.log("articulo:" + producto.nombre + "Precio: $ " + producto.precio);
+
+        })
+        //javascript moderno con forEach
+        console.log("b: javascript moderno con forEach: productos mas de 300 €")
+        carrito.forEach(producto => { //significa function(producto)  
+            if (producto.precio > 300) {// ahorramos el for
+                console.table("articulo:" + producto.nombre + "Precio: € " + producto.precio);
+            }
+
+
+        })
+        //mostrar el total carrito
+        console.log("c: Mostrar el total carrito");
+        var suma = carrito.reduce(function (total, producto, index, carrito) {
+            return total += producto.precio;
+        }, 0);
+        console.log("Total carrito= " + suma);
+
+        //d) Obtenir nous arrays, tenint en compte les següents condicions: a. Nuevo Array con Productos con precio > 400 b. Nuevo Carrito con Productos con el nombre ‘Celular' c. Nuevo Carrito con todos los excepto ‘Laptop 
+
+        console.log("d: Nous array:");
+        console.log("Nuevo Array con Productos con precio > 400 ");
+
+        console.log("amb metode filter");
+
+        let nuevoCarrito = carrito.filter(producto =>
+            producto.precio > 400);
+
+        console.log("array con productos de 400€:" + nuevoCarrito);
+
+
+
     </script>
 
 </body>

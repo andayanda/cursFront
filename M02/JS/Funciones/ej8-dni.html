@@ -18,30 +18,28 @@
         =”TRWAGMYFPDXBNJZSQVHLCKE”;</li>
     <script>
         const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        
-        let dni ="52190433y";//si elimino
-       
 
 
-        let letraDni = dni.slice(8);
-        let numdni = parseInt(dni.slice(0, 8));
-        console.log(letraDni)
-        console.log(numdni)
-        let modul = numdni % 23;
-        console.log(modul);
 
         function comprobar(dni) {
-            if (letraDni = letras.charAt(modul)) {
+            let letraDni = dni.slice(8);
+            let numdni = parseInt(dni.slice(0, 8));
+            console.log("esta es la letra del dni: " + letraDni)
+            console.log("este es el numero del dni: " + numdni)
+            let modul = numdni % 23;
+            console.log("este es el resto: " + modul);
+
+            if (letraDni.toLowerCase() === letras.charAt(modul).toLowerCase()) {
                 console.log("la letra es correcta")
 
             } else {
                 console.log("la letra es incorrecta");
             }
-
+            console.log("El carácter que corresponde al modulo es '" + letras.charAt(modul) + "'");
         }
-        console.log("El carácter que corresponde al modulo es '" + letras.charAt(modul) + "'");
+        
 
-        comprobar("52190433y");//si 
+        comprobar("52190433Y"); //si 
         comprobar("52190433a");
     </script>
 </body>

@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+   
+    <p >6. Donada una adreça de correu, implementa una funció que verifiqui si el email té carregat el caràcter @. </p>
+    <p id="demo"></p>
+    <script>
+        let adress="carmelagmail.com";
+        let correcto= adress.search("@");
+        document.getElementById("demo").innerHTML = adress;
+        document.getElementById("demo").innerHTML = correcto;
+        
+        
+        // //escenario 1
+        // adress="carmela@gmail.com"
+        // comprobar(adress);
+        // //escenario 2
+        // nom="carmela.gmail";      
+        // comprobar(adress);
+        
+        function comprobar(adress) {
+//[instruccions]
+if (correcto>=0) {
+    console.log("El correo contiene la @ ")
+    
+} else {
+    console.log("El correo No contiene la @ ")
+    
+}
+  
+ }
+
+
+    </script>
+</body>
+</html>

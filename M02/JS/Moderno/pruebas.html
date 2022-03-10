@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES6 
+        let nuevaFuncion = () => {}
+        //código de la función  
+        //Sense paràmetres 
+        let getBienvenida = () => console.log("Hola mundo");
+        //invocación 
+        getBienvenida(); //ok
+
+        //amb 1 paràmetres
+        let quadrat = numero => {
+            return numero * numero;
+        }
+
+
+        //invocación 
+
+        oo = quadrat(2);
+        console.log(oo); //ok
+
+        //amb 2 paràmetres 
+        let saludar = (nombre, tratamiento) => {
+            alert('Hola ' + tratamiento + ' ' + nombre) //ok
+        }
+        //invocación 
+        saludar('Jana', 'srta.'); //ok
+        //Funció abreujada 
+        let saluda = (nombre, tratamiento) => alert('Hola ' + tratamiento + ' ' + nombre);
+        //invocación 
+        saluda('Juan', 'profe'); //ok
+        // retorna un valor 
+        const aprendiendo = () => 'Aprendiendo JavaScript'; //ok
+        console.log(aprendiendo());
+        //Amb condicional 
+        let mayor = a => (a < 10) ? 'valid' : 'invalid'
+        //invocacion      
+        console.log(mayor(12));
+    </script>
+</body>
+
+</html>

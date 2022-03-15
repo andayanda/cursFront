@@ -1,13 +1,27 @@
-//logica que funcionara con cualquier id de producto. 
-function buy(id){
-        productBuy=products.find(function(element){//element: es el elemento en el que esta iterando. El find hace un for
-        if(element.id== id){
-                return element;
-        }
-})
-cart.push(productBuy)
-console.table(cart);        
+//añadir productos al carrito
+//function buy(id){
+        // productBuy=products.find(function(element){//element: es el elemento en el que esta iterando. El find hace un for
+        //         if(element.id== id){
+        //                 return element;
+        //         }
+        // })
+        // cart.push(productBuy)
+        // console.table(cart);        
+        // }
+function buy(id) {
+  console.table(products[id - 1]);
+  
+    
+    cart.push(products[id-1]);
+  
+  
 }
+
+//mostrar el carrito
+function ShowCart() {//no funciona
+  console.table(cart);
+}
+//vaciar el carrito
 // function cleanCart(cart){
 //         while(cart.length) {
 //                 cart.pop();
@@ -29,6 +43,12 @@ console.table(cart);
 //         }
 
 // } 
+function cleanCart(){
+    cart.length = 0;
+
+    cart = [];
+}
+
 function sumaTipo(porTipo){
         for (let i = 0; i < cart.length; i++) {
                
@@ -45,3 +65,4 @@ function sumaTipo(porTipo){
                 
         }
 }
+

@@ -17,6 +17,18 @@ function getPelisFromDirector(nombre) {
   });
   console.table(directorArray);
   return directorArray;
-
- 
 }
+//calcular la mitjana de les puntuacions de les seves pel·lícules. 
+function moviesAverageOfDirector(nombre) {
+  const filmByDirector = movies.filter(function (film) {//como la anterior
+     return film.director === nombre;
+  });
+  console.log("lo mismo que el anterior")
+  console.table(filmByDirector);
+  return filmByDirector;
+}
+  const totalPuntuacion = filmByDirector.reduce(function(contador,film){
+  // console.log("la puntuacion"+filmByDirector.title+"la puntuacion"+filmByDirector.score) 
+  return contador+=film.score;},0);
+
+console.log(totalPuntuacion);

@@ -5,10 +5,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 }); 
 //mouseenter, mouseout 
 //a) Al entrar al menú de navegació, canviarem el seu estil de backgroundColor= White
-document.querySelector(".navegacion").addEventListener("mousedown", mouseDown); 
+const nav=document.querySelector(".navegacion");
+nav.addEventListener("mousedown", clicRaton); 
 
 
-function mouseDown() {
+function clicRaton() {
     document.querySelector(".navegacion").style.backgroundColor="red";
 }
 

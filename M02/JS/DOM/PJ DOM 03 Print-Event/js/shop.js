@@ -16,7 +16,7 @@ cards.addEventListener('click', e => {
 
     if (e.target.classList.contains('cardAdd')) {
         addCarrito(e.target.id);
-        //setCarrito(e.target.parentElement)
+        pintarCarrito()
     }
     if (e.target.classList.contains('cardRemove')) {
         removeFromCart(e.target.id);
@@ -159,25 +159,27 @@ function removeFromCart(id) {
     } else {
         alert("Aquest element no el tens al carret")
     }
-    pintarCarrito();
+ 
 }
 
   // cridem pintar carrito
-  function pintarCarrito(cart) {
+  function pintarCarrito() {
       let unidad=document.getElementById("items");
-      unidad="";
+      unidad.innerHTML="";
 
     cart.forEach(item => {
+        templateCarrito.querySelector('th').textContent = item.id
         templateCarrito.querySelectorAll('td')[1].textContent = item.price
         templateCarrito.querySelectorAll('td')[0].textContent = item.name
-        templateCarrito.querySelector('th').textContent = item.id
+      
         templateCarrito.querySelectorAll('td')[2].textContent = item.quantity
         templateCarrito.querySelector('span').textContent = item.subtotal
-        const clone = templateCard.cloneNode(true)
+        const clone = templateCarrito.cloneNode(true)
         // se guarda en memoria, de momento no se printa
         fragment.appendChild(clone)
     })
-    items.appendChild(fragment)
+
+    unidad.appendChild(fragment)
 }
 
 

@@ -160,24 +160,23 @@ function removeFromCart(id) {
     } else {
         alert("Aquest element no el tens al carret")
     }
-
-    // cridem pintar carrito
-    function pintarCarrito(cart) {
-
-        cart.forEach(item => {
-            templateCarrito.querySelector('th').textContent = item.id
-            templateCarrito.querySelector('td')[0].textContent = item.name
-            templateCarrito.querySelector('td')[1].textContent = item.price
-            templateCarrito.querySelector('td')[2].textContent = item.quantity
-            templateCarrito.querySelector('span').textContent = item.subtotal
-            const clone = templateCard.cloneNode(true)
-            // se guarda en memoria, de momento no se printa
-            fragment.appendChild(clone)
-        })
-        cards.appendChild(fragment)
-    }
-    
     pintarCarrito();
+}
+
+  // cridem pintar carrito
+  function pintarCarrito(cart) {
+
+    cart.forEach(item => {
+        templateCarrito.querySelector('th').textContent = item.id
+        templateCarrito.querySelector('td')[0].textContent = item.name
+        templateCarrito.querySelector('td')[1].textContent = item.price
+        templateCarrito.querySelector('td')[2].textContent = item.quantity
+        templateCarrito.querySelector('span').textContent = item.subtotal
+        const clone = templateCard.cloneNode(true)
+        // se guarda en memoria, de momento no se printa
+        fragment.appendChild(clone)
+    })
+    itemsModal.appendChild(fragment)
 }
 
 

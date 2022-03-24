@@ -1,5 +1,5 @@
 //printar las card desde data.js con Javascript
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded",()=>{// no funciona
     printarCards();
 })
  

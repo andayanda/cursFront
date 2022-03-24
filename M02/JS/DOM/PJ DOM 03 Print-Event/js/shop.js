@@ -143,10 +143,9 @@ function addCarrito(id) {
 
     calculateSubtotals();
     calculateTotal();
-    if (objIndex != -1) applyPromotionsCart(objIndex);
+    // if (objIndex != -1) applyPromotionsCart(objIndex);
 
-    // cridem pintar carrito
-    pintarCarrito();
+   
 }
 
 
@@ -165,18 +164,20 @@ function removeFromCart(id) {
 
   // cridem pintar carrito
   function pintarCarrito(cart) {
+      let unidad=document.getElementById("items");
+      unidad="";
 
     cart.forEach(item => {
+        templateCarrito.querySelectorAll('td')[1].textContent = item.price
+        templateCarrito.querySelectorAll('td')[0].textContent = item.name
         templateCarrito.querySelector('th').textContent = item.id
-        templateCarrito.querySelector('td')[0].textContent = item.name
-        templateCarrito.querySelector('td')[1].textContent = item.price
-        templateCarrito.querySelector('td')[2].textContent = item.quantity
+        templateCarrito.querySelectorAll('td')[2].textContent = item.quantity
         templateCarrito.querySelector('span').textContent = item.subtotal
         const clone = templateCard.cloneNode(true)
         // se guarda en memoria, de momento no se printa
         fragment.appendChild(clone)
     })
-    itemsModal.appendChild(fragment)
+    items.appendChild(fragment)
 }
 
 

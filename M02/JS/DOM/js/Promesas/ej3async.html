@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Fent servir promeses
+
+        const calcula = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                const sum = 4 + 5;
+                if (isNaN(sum)) {
+                    reject('Error while calculating sum.');
+                } else {
+                    resolve(sum);
+                }
+            }, 2000);
+
+        });
+        calcula.then(function (result) {
+            console.log(result);
+        }).catch(function (error) {
+            console.log(error);
+        });
+
+        //amb async
+        async function calcular() {
+            let sum = 0;
+            setTimeout(function () {
+                sum = 4 + 5;
+                if (isNaN(sum)) {
+                    console.log('Error while calculating sum.');
+                } else {
+                    console.log(sum);
+                }
+            }, 3000);
+        };
+        async function inici() {
+            await calcular();
+            console.log("Crida a calcula acabada ()");
+        }
+        inici();
+        console.log("ACABAT EL PROGRAMA");
+    </script>
+</body>
+
+</html>

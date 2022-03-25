@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Crida a la promesa aplicarDescuento.  Recordar capturar l’error dins de la promesa: 'No se pudo aplicar el descuento' 
+        function calculDescuento() {
+            console.log('Aplicando el Descuento...');
+            return true;
+        }
+        const aplicarDescuento = new Promise((resolve, reject) => {
+            if (calculDescuento()) {
+                resolve('Descuento Aplicado');
+            } else {
+                reject('No se pudo aplicar el descuento');
+            }
+        });
+        //llamada
+       aplicarDescuento.then(function (result) {
+            console.log(result);
+           
+
+        })
+
+
+        // const paises = [];
+        // const nuevoPais = pais => new Promise(resolve => {
+
+        //     setTimeout(() => {
+        //         paises.push(pais);
+        //         resolve(`Agregado: ${pais}`)
+        //     }, 3000);
+        // });
+
+        //     //llamada
+        // nuevoPais("Francia")
+        // .then(function (result) {
+        //     console.log(result);
+        //     console.log(paises);
+        //     return nuevoPais ("Inglaterra")
+        // })
+        // .then(function (result) {
+        //     console.log(result);
+        //     console.log(paises);
+        //     return nuevoPais ("Italia")
+        // })
+        // .then(function (result) {
+        //     console.log(result);
+        //     console.log(paises);
+
+        // })
+        // .then(function (result) {
+        //     console.log(result);
+        //     console.log(paises);
+        //     return nuevoPais (Italia)
+
+        // })
+        // .catch(function (error) {
+        //     console.log("Hay un error: "+error);
+        // });
+    </script>
+</body>
+
+</html>

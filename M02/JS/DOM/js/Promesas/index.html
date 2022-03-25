@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Fent servir promeses, agrega cada 3 segons un país: Alemania, Francia, Inglaterra, Italia. Capturar errors no controlats. 
+        const paises = [];
+        const nuevoPais = pais => new Promise(resolve => {
+           
+            setTimeout(() => {
+                paises.push(pais);
+                resolve(`Agregado: ${pais}`)
+            }, 3000);
+        });
+
+            //llamada
+        nuevoPais("Francia")
+        .then(function (result) {
+            console.log(result);
+            console.log(paises);
+            return nuevoPais ("Inglaterra")
+        })
+        .then(function (result) {
+            console.log(result);
+            console.log(paises);
+            return nuevoPais ("Italia")
+        })
+        .then(function (result) {
+            console.log(result);
+            console.log(paises);
+           
+        })
+        .then(function (result) {
+            console.log(result);
+            console.log(paises);
+            return nuevoPais (Italia)
+           
+        })
+        .catch(function (error) {
+            console.log("Hay un error: "+error);
+        });
+
+        // const calcula = new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         const sum = 4 + 5;
+        //         if (isNaN(sum)) {
+        //             reject('Error while calculating sum.');
+        //         } else {
+        //             resolve(sum);
+        //         }
+        //     }, 2000);
+
+        // });
+        // calcula.then(function (result) {
+        //     console.log(result);
+        // }).catch(function (error) {
+        //     console.log(error);
+        // });
+    </script>
+</body>
+
+</html>

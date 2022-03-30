@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js">
+    </script>
+    <title>A First App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label for="goal">Goal</label>
+        <input type="text" id="goal" v-model="valorEntrado" />
+        <button v-on:click="addGoal">Add Goal</button>
+      </div>
+      <h3>{{goals}}</h3>
+
+    </div>
+    <script >
+      var vm=new Vue({
+        el:"#app",
+        data:{
+          goals:[],
+          valorEntrado:"Hola que tal"
+        },
+     
+      methods: {
+                addGoal: function () {
+                   console.log(this.goals);
+                   console.log(this.goals++);
+
+                }
+              }})
+    </script>
+  </body>
+</html>

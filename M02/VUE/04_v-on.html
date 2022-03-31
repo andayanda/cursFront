@@ -1,0 +1,34 @@
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+      
+   </head>
+   <body>
+      <div id = "databinding">
+          <!--el evento v-on o @ siempre se asocia a un método (funcion)-->
+         <button v-on:click = "displaynumbers">Click ME</button>
+         <!-- També podriem @click: 
+         <button @click = "displaynumbers">Click ME</button>-->   
+       <input type="text" v-model="num1">
+       <input type="text" v-model="num2">       
+         <h2> Add: {{num1}} + 200 = {{total}}</h2>
+      </div>
+      <script type = "text/javascript">
+         var vm = new Vue({
+            el: '#databinding',
+            data: {
+               num1: 100,
+               num2 : 200,
+               total : ''
+            },
+            methods : {
+               displaynumbers : function(evento) {
+                  console.log(evento);
+                  return this.total = parseInt(this.num1) + parseInt(this.num2);
+               }
+            },
+         });
+      </script>
+   </body>
+</html>

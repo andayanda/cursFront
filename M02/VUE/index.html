@@ -11,13 +11,23 @@
   <div id="app"></div>
 
   <template id="ejemplo">
-    <div>     
-        <b>{{ mensaje }}</b>
-        <img :src="imagen" />      
-      <button @click="
-      ">Mostrar/Ocultar</button>
+    <div>
+    <div v-if="mostrar">
+      <b>{{ mensaje }}</b>
+      <img :src="imagen" />
+      <!-- Mostra tots el noms dels cursos en una llista.    -->
+      <ul>
+        <li v-for="item in cursos">
+          <a v-bind:href="item.url">{{item.name}} </a>
+        </li>
+      </ul>
+      <!-- 2. Afegeix els links a cadascun del cursos. 3. Al donar click al botó: Mostra/oculta tot el contingut. -->
+      
     </div>
-  </template>  
+    <button @click="toggleMostrar" >Mostrar/Ocultar</button>
+  </div>
+    
+  </template>
 
   <!--OJO això ha d'estar aquí al final -->
   <script src="js/javascript.js"></script>

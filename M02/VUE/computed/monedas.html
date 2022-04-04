@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>VueJs Instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <style>
+        #databinding {
+            padding: 20px 15px 15px 15px;
+            margin: 0 0 25px 0;
+            width: auto;
+            background-color: #e7e7e7;
+        }
+
+        span,
+        option,
+        input {
+            font-size: 25px;
+        }
+    </style>
+
+    <div id="databinding">
+        <h1>Benvinguda:</h1>
+        <h1>Currency Converter</h1>
+        <span>Enter Amount:</span>
+        <input type="number" placeholder="Enter Amount" /><br /><br />
+        <span>Convert From:</span>
+        <select style="width:300px;font-size:25px;">
+            <option v-for="(elemento) in  currencyfrom" :value="elemento.name" v-model = "convertfrom">{{elemento.desc}}
+              </option>
+        </select>
+        <span>Convert To:</span>
+        <select  style="width:300px;font-size:25px;">
+            <option v-for="(elemento) in  currencyfrom" :value="elemento.name" v-model = "convertto">{{elemento.desc}} </option>
+        </select><br /><br />
+       Convert From: {{convertfrom}} {elemento.desc}}
+       Convert To: {{convertto}}
+      
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#databinding',
+
+            data: {
+
+
+                currencyfrom: [{
+                  
+                        name: "USD",
+                        desc: "US Dollar"
+                    },
+                    {
+                        name: "EUR",
+                        desc: "Euro"
+                    },
+                    {
+                        name: "INR",
+                        desc: "Indian Rupee"
+                    },
+                    {
+                        name: "BHD",
+                        desc: "Bahraini Dinar"
+                    }
+                ],
+               convertfrom: "INR",
+               convertto:"USD",
+               amount:""
+            },
+            // computed: {
+            //      currencyfromFiltrados: function () {
+            //         return this. currencyfrom.filter(element =>
+            //             element.toUpperCase().includes(this.pais.toUpperCase()))
+            //     }
+            // }
+        })
+    </script>
+
+</body>
+
+</html>

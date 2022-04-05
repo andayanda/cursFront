@@ -22,32 +22,33 @@
     </style>
 
     <div id="databinding">
-        <h1>Benvinguda:</h1>
-        <h1>Currency Converter</h1>
+        <h1>Benvinguda: {{clienta}} </h1>
+        <h1>Conversor de monedas</h1>
         <span>Enter Amount:</span>
-        <input type="number" placeholder="Enter Amount" /><br /><br />
+        <!-- Associa a una variable el valor que el client introdueix a Amount i renderitza el seu
+valor per pantalla. -->
+        <input type="number" placeholder="Enter Amount" V-model.number="amount" /><br /><br />
         <span>Convert From:</span>
-        <select style="width:300px;font-size:25px;">
-            <option v-for="(elemento) in  currencyfrom" :value="elemento.name" v-model = "convertfrom">{{elemento.desc}}
-              </option>
+        <select style="width:300px;font-size:25px;" v-model="convertfrom">
+            <option v-for="(elemento) in  currencyfrom" :value="elemento.name">{{elemento.desc}}
+            </option>
         </select>
         <span>Convert To:</span>
-        <select  style="width:300px;font-size:25px;">
-            <option v-for="(elemento) in  currencyfrom" :value="elemento.name" v-model = "convertto">{{elemento.desc}} </option>
+        <select style="width:300px;font-size:25px;" v-model="convertto">
+            <option v-for="(elemento) in  currencyfrom" :value="elemento.name">{{elemento.desc}}
+            </option>
         </select><br /><br />
-       Convert From: {{convertfrom}} {elemento.desc}}
-       Convert To: {{convertto}}
-      
+        <!-- Renderitza per pantalla les opcions seleccionades -->
+        <span>{{amount}} {{convertfrom}} To {{convertto}} Equal {{convertedCurrency}}</span>
+
+
     </div>
     <script>
         const app = new Vue({
             el: '#databinding',
-
             data: {
-
-
+                clienta: "Carmen",
                 currencyfrom: [{
-                  
                         name: "USD",
                         desc: "US Dollar"
                     },
@@ -64,16 +65,66 @@
                         desc: "Bahraini Dinar"
                     }
                 ],
-               convertfrom: "INR",
-               convertto:"USD",
-               amount:""
+                convertfrom: "INR", //Associa a una variable el valor seleccionat en el Convert From. Inicialitza a INR
+                convertto: "USD", //Associa a una variable el valor seleccionat en el Convert To. Inicialitza a USD 
+                amount: ""
             },
-            // computed: {
-            //      currencyfromFiltrados: function () {
-            //         return this. currencyfrom.filter(element =>
-            //             element.toUpperCase().includes(this.pais.toUpperCase()))
-            //     }
-            // }
+            computed: {
+                convertedCurrency: function () {
+                    var to = this.convertto;
+                    var from = this.convertfrom;
+                    var final;
+                    switch (from) {
+                        case "INR":
+                            if (to == "USD") {
+                                final = this.amount * 0.016;
+                            }
+                            if (to == "EUR") {
+                                final = this.amount * 0.013;
+                            }
+                            if (to == "BHD") {
+                                final = this.amount * 0.0059;
+                            }
+                            case "USD":
+                                if (to == "INR") {
+                                    final = this.amount * 63.88;
+                                }
+                                if (to == "EUR") {
+                                    final = this.amount * 0.84;
+                                }
+                                if (to == "BHD") {
+                                    final = this.amount * 0.38;
+                                }
+                                case "EUR":
+                                    if (to == "INR") {
+                                        final = this.amount * 76.22;
+                                    }
+                                    if (to == "USD") {
+                                        final = this.amount * 1.19;
+                                    }
+                                    if (to == "BHD") {
+                                        final = this.amount * 0.45;
+                                    }
+                                    case "BHD":
+                                        if (to == "INR") {
+                                            final = this.amount * 169.44;
+                                        }
+                                        if (to == "USD") {
+                                            final = this.amount * 2.65;
+                                        }
+                                        if (to == "EUR") {
+                                            final = this.amount * 2.22;
+                                        }
+
+
+                    }
+                    console.log(final);
+                    return final
+
+                }
+            }
+
+
         })
     </script>
 

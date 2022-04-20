@@ -1,10 +1,10 @@
 Vue.component('user-details', {
     template: `
       <div>
-      <p>Hi (Componente: user-details){{first}}{{last}}</p>
+      <p>Hi (Componente: user-details){{primer}}{{last}}</p>
       </div>
       `,
-      props:['first','last']
+      props:['primer','last']
    
   });
   

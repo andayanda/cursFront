@@ -11,10 +11,10 @@
     <div id="my-app">
     <h1>{{name}}</h1>
     <h2>{{firstName}}</h2>
-    <button @click='onAdd'>Contar clicks: {{count}}</button>
+    <button @click='onAdd'>Contar clicks normal: {{count}}</button>
     <my-button></my-button>
     <my-button></my-button>
-    <user-details v-bind:first="firstName" v-bind:last="lastName"></user-details>
+    <user-details v-bind:primer="firstName" v-bind:last="lastName"></user-details>
     
 </div>
 <script src="./user-details.js"></script>

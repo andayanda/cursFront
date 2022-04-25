@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import miVistaView from '../views/miVistaView.vue'
+import chistesCheese from '../views/chistesCheese.vue'
 
 
 Vue.use(VueRouter)
@@ -23,7 +24,12 @@ const routes = [
   {
     path: '/miVista',
     name: 'miVista',
-    component: miVistaView
+    component: miVistaView,
+  },
+  {
+    path: '/chistesQueso',
+    name: 'chistesQueso',
+    component: chistesCheese,
   }
 ]
 
